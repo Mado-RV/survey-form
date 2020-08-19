@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+h1{
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+p{
+  font-family: monospace;
+  font-size: 20px;
+}
+label{
+  font-family: monospace;
+  font-size:20px;
+}
+.smallCard{
+      border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: auto;
+    padding: 50px;
+    background-color: #FADADD;
+    width: 800px;
+}
+   button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 30px 100px 30px 100px;
+     font-size: 40px;
+     margin: center;
+     width: 600px;
+  }
+
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 1000ms;
+  }
+@keyframes background-color{
+  100%{
+    color: #9010FA;
+  }
+}
+</style>
+<body>
+<h1 id="title">UMBB E-learning Survey Form</h1>
+<h3>Thank you for taking your time to help us improve the platform</h3>
+<div class="smallCard">
+<p id="description">This survey was created in an effort to find out if  distance learning is an effective tool for studying ,if the students are willing to come back and study at the faculty or they prefer to study from home</p>
+<form id="survey-form" action="/submit-survey-form">
+<label id="name-label" text-align="left">Name<br>
+<input  id="name" type="text" placeholder="Enter your name" required></label>
+<label id="matricule-label" text-align="left"><br>Matricule <br>
+<input type="text" placeholder="Enter your Matricule" required></label>
+<label id="email-label" text-align="left"><br>E-mail<br>
+<input id="email" type="email" placeholder="Enter your e-mail" pattern=".+@globex.com" size="30" required></label>
+<label id="number-label" text-align="left"><br>Year<br>
+<input id="number" type="number" placeholder="Level" min="1" max="5"></label><br>
+<label for="dropdown" title="faculty and departement">Faculty and Departement<br></label>
+<select id="dropdown" name="faculty-departement">
+<option selected>-Select your Faculty and department-</option>
+<optgroup label="Faculty of Sciences (INIM)"
+<option value="fs-mathematics">Mathematics</option>
+<option value="fs-physics">Physics</option>
+<option value="fs-chemistry">Chemistry</option>
+<option value="fs-computer-science">Computer Science</option>
+<option value="fs-biology">Biology</option>
+<option value="fs-foreign-languages">Foreign Languages</option>
+<option value="fs-monitoring-unit">Monitoring Unit(Sciences and Techniques of Physical and Sports Activities)</option>
+<option value="fs-agronomic-sciences-unit">Agronomic Sciences Unit</option>
+<option value="fs-infotronic-unit">Infotronic Unit</option></optgroup>
+<optgroup label="Faculty of Technology(800)"
+<option value="ft-industrial-process-engineering">Industrial Process Engineering</option>
+<option value="ft-food-technology">Food Technology</option>
+<option value="ft-environmental-engineering">Environmental Engineering</option>
+<option value="ft-mechanical-engineering">Mechanical Engineering</option>
+<option value="ft-energetics">Energetics</option>
+<option value="ft-industrial-maintenance">Industrial Maintenance</option>
+<option value="ft-materials-engineering">Materials Engineering</option>
+<option value="ft-civil-engineering">Civil Engineering</option>
+</optgroup>
+<optgroup label="Faculty of Hydrocarbons and Chemistry (INH)">
+<option value="fhc-earthquake-engineering-geophysics-and-random-phenomena">Earthquake Engineering, Geophysics and Random Phenomena</option>
+<option value="fhc-mining-and-petroleum-deposits">Mining and Petroleum Deposits</option>
+<option value="fhc-hydrocarbon-transport-and-equipement">Hydrocarbon Transport and Equipment</option>
+<option value="fhc-chemical-and-pharmacetical-process-engineering">Chemical and Pharmacetical Process Engineering</option>
+<option value="fhc-process-automation-and-electrification">Process Automation and Electrification</option>
+<option value="fhc-economy-and-marketing-of-hydrocarbons">Economy and Marketing of Hydrocarbons</option>
+<option value="fhc-hydrocarbon-transport-and-equipement">Hydrocarbon Transport and Equipment</option>
+</optgroup>
+<optgroup label="Faculty of Economics,Business and Management Sciences">
+<option value="febms-management-science">Management Science</option>
+<option value="febms-commercial-sciences">Commercial Sciences</option>
+<option value="febms-economic-science">Economic Science</option></optgroup>
+<optgroup label="Faculty of Law(Boudouaou)">
+<option value="fl-public-law">Public Law</option>
+<option value="fl-private-law">Private Law</option>
+<option value="fl-political-sciences">Political Sciences</option>
+<option value="fl-arabic-language-and-literature-unit">Arabic Language and Literature Unit</option>
+</optgroup>
+<optgroup label="Institute of Electric and Electronic Engineering(INELEC)">
+<option value="inelec-basic-education">Basic Education</option>
+<option value="inelec-electronics">Electronics</option>
+<option value="inelec-automatic-and-electrical-engineering">Automatic and Electrical Engineering</option></optgroup>
+required></select>
+<p>Do you think the site is useful?<br>
+<label for="usefulness">
+<input value="very-useful" type="radio" name="usefulness">Very useful</label><br>
+<label for="usefulness">
+<input value="useful-but-needs-improvement" type="radio" name="usefulness">Useful but needs improvement</label><br>
+<label for="usefulness">
+<input value="not-useful" type="radio" name="usefulness">Not useful</label><br>
+</p>
+<p>Which method of teaching do you prefer?<br>
+<label for="teaching-methods">
+<input value="pdfs-with-lessons" type="radio" name="teaching-methods">Pdfs with lessons</label><br>
+<label for="teaching-methods">
+<input value="videos-uploaded-online-of-lessons" type="radio" name="teaching-methods">Videos of lessons uploaded online</label><br>
+<label for="teaching-methods">
+<input value="teacher-students-video-conferencing-lessons" type="radio" name="teaching-methods">Teacher-students video conferencing lessons</label><br>
+</p>
+<p>What would you like to see improved?<br>
+<label for="improvements">
+<input value="size-or-content-of-pdfs" type="checkbox" name="improvements" >Size or Content of Pdfs</label><br>
+<label for="improvements">
+<input value="time-allocation-for-course-chapters" type="checkbox" name="improvements">Time allocation for course chapters</label><br>
+<label for="improvements">
+<input value="length-of-videos-posted-online" type="checkbox" name="improvements" >Length of videos posted online</label><br>
+<label for="improvements">
+<input value="number-of-video-conference-classes-per-week" type="checkbox" name="improvements" >Number of video conference classes per week</label><br>
+<label for="improvements">
+<input value="teacher-student-ratio-per-video-conference-class" type="checkbox" name="improvements" >Teacher-student ratio per video conference class</label><br>
+<label for="improvements">
+<input value="number-of-assignments-per-week-per-course" type="checkbox" name="improvements">Number of assignments per week per course</label><br>
+</p>
+<p>Do you want to come back to study at the faculty or continue studying at home?
+<br><label for="study-choice">
+<input value="yes" type="radio" name="study-choice" required>Yes</label>
+<label for="study-choice">
+<input value="no" type="radio" name="study-choice" required>No</label>
+</p>
+<p>Any comments or suggestions are welcome below<br>
+<textarea id="comments-&-suggestions" type="text" placeholder="Comments or suggestions here"></textarea><br>
+<p><button id="submit" type="submit" >SUBMIT</button></p>
+</form>
+</div>
+</body>
+</html>
